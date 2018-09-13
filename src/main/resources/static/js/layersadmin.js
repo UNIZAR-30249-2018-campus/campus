@@ -285,12 +285,25 @@ function getinfoEspacio(e) {
     punto=e;
     console.log("EL INFO ESPACIO = "+ xmlhttp.responseText)
     idEspacio=infoespacio["idE"]
+    var horarioEnUso;
+    if (
+        infoespacio["nombre"].includes("AULA")){
+        var horarioEnUso = "9:00-14:00, 15:00-21:00";
+    }
+    else if (infoespacio["nombre"].includes("LABORATORIO") || infoespacio["nombre"].includes("DESPACHO")
+        || infoespacio["nombre"].includes("BIBLIOTECA")){
+        var horarioEnUso = "9:00-22:00";
+    }
+    else {
+        horarioEnUso = "Sin un horario específico de uso";
+    }
     var contenidoficha='<div id="ficha">'+
         '<b class="w3-center">Ficha</b><br>'+
         '<b>Edificio: '+infoespacio["edificio"] +' </b><br>'+
         '<b>Espacio: '+ infoespacio["nombre"]+' </b><br>'+
         '<b>Planta: '+ infoespacio["planta"]+' </b><br>'+
         '<b>Exterior:' + infoespacio["exterior"]+' </b><br>'+
+        '<b>Horario en uso:'+ horario +' </b><br>'+
         '<button  onclick="muestraincidencias(idEspacio)"  role="button" class="w3-button w3-blue">Ver incidencias</button>'+
         '</div>';
     popup = L.responsivePopup().setContent(contenidoficha);
