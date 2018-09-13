@@ -1,0 +1,20 @@
+.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}
+.w3-xlarge{font-size:24px!important}
+.w3-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+.w3-button:hover{color:#000!important;background-color:#ccc!important}
+.w3-blue{color:#fff!important;background-color:#0074d9!important}
+.w3-center{text-align:center}
+.w3-padding-64{padding-top:64px!important;padding-bottom:64px!important}
+.w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100%;
+    font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.lorem {
+    font-style: italic;
+    color: #AAA;
+}

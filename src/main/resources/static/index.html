@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-responsive-popup@0.2.0/leaflet.responsive.popup.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+          integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+            integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+            crossorigin=""></script>
+
+    <link rel="stylesheet" href="css/leaflet-sidebar.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+<div id="sidebar" class="sidebar collapsed">
+    <!-- Nav tabs -->
+    <div class="sidebar-tabs">
+        <ul role="tablist">
+            <li><a href="#incidencias"  role="tab"><i class="fa fa-bars"></i></a></li>
+
+        </ul>
+        <ul role="tablist">
+            <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="sidebar-content">
+        <div class="sidebar-pane" id="incidencias">
+            <h1 class="sidebar-header">
+                Incidencias actuales
+                <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+            </h1>
+            <div id="nuevasincidencias">
+            </div>
+
+        </div>
+
+
+
+        <div class="sidebar-pane" id="settings">
+            <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+
+            <div class="w3-padding-64" >
+                <form action="login" method="post" id="login">
+                    <div class="w3-padding-32" id="campos" >
+                        <label class="w3-padding-16 w3-xlarge"><b>Nombre usuario administrador</b></label>
+                        <input id="username" type="text" placeholder="Enter username" name="username" maxlength="70" class="w3-input" required><br>
+                        <label  class="w3-padding-16 w3-xlarge"><b>Contraseña</b></label>
+                        <input id="password" type="password" placeholder="Enter Password"  maxlength="30" name="password" class="w3-input" required><br>
+                        <div class = "w3-center">
+                            <button type="reset" class="w3-button w3-blue">Cancelar</button>
+                            <button id="submitForm" type="submit" class="w3-button w3-blue">Log in</button>
+                        </div>
+                        <div id="resLogin"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="map" class="sidebar-map"></div>
+
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-responsive-popup@0.2.0/leaflet.responsive.popup.js"></script>
+
+<script src="js/leaflet-sidebar.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="js/proj4-compressed.js"></script>
+<script src="js/proj4leaflet.js"></script>
+<script src="js/layers.js"></script>
+
+</body>
+
+</html>
